@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>우리의 추억</h1>
+      <ul>
+        <li v-for="(value, key) in list" :key="key">
+          <h3>{{value}}</h3>
+        </li>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            list: {
+              1: '처음 자기소개 한 날 ... 추억',
+              2: '함께 먹은 건대우동 ^^ 오늘 점심 ...',
+              3: '어린이대공원에서 본 분수대 ... 흑 ...',
+              4: '함께 노나 먹은 카누 커피랑 쪼코파이...',
+              5: '쌔빠지게 공부한 6개월 ... 영 원 하 자 ^^',
+            },
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

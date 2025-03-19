@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      사랑지수 :
+      <input
+        type="text"
+        placeholder="두근두근...당신의 사랑 지수를
+      입력하세요 >_< !"
+        v-model="loveLevel"
+      />
+      <br />
+
+      <div v-if="loveLevel < 200">
+        당신의 등급 : ♡ Newbie ㅜ.ㅜ 사랑...그 거 참 어렵다...
+      </div>
+      <div v-else-if="loveLevel <500">
+        당신의 등급 : ♥ Love Leaner ~ 나 이제 좀 사랑을 알 것 같아 //_//
+      </div>
+      <div v-else-if="loveLevel < 1000">당신의 등급 : ♥♥ Love Expert !</div>
+      <div v-else>당신의 등급 : ♥♥♥ Love Master ^_^ 사랑이 뭐냐면 ~~~ ...</div>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { loveLevel: 0 };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

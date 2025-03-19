@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <label>
+        <input
+          type="checkbox"
+          v-model="agree"
+          true-value="yes"
+          false-value="no"
+        />
+        고백할 준비 됐나요 ?
+      </label>
+      <p v-show="agree == 'yes'">두근두근 ,,, 고백공격 준비 완료!</p>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return { agree: 'no' };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
