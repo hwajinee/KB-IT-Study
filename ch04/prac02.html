@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button v-on:click="select1">엘더 지팡이</button>
+      <button v-on:click="select2">단풍 지팡이</button>
+      <button @click="select3">벚나무 지팡이</button>
+      <button @click="reset">지팡이 초기화</button>
+      <h3>{{result}}</h3>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let select1_count = 0;
+      let select2_count = 0;
+      let select3_count = 0;
+
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            result: '',
+          };
+        },
+        methods: {
+          select1() {
+            select1_count++;
+            if (select1_count > 1) {
+              this.result =
+                '이미 엘더 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+            } else {
+              this.result = '당신은 엘더 지팡이를 선택했습니다!';
+            }
+          },
+          select2() {
+            select2_count++;
+            if (select2_count > 1) {
+              this.result =
+                '이미 단풍 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+            } else {
+              this.result = '당신은 단풍 지팡이를 선택했습니다!';
+            }
+          },
+          select3() {
+            select3_count++;
+            if (select3_count > 1) {
+              this.result =
+                '이미 벚나무 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+            } else {
+              this.result = '당신은 벚나무 지팡이를 선택했습니다!';
+            }
+          },
+          reset() {
+            select1_count = 0;
+            select2_count = 0;
+            select3_count = 0;
+            this.result = '지팡이를 다시 선택해주세요.';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

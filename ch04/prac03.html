@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      이름: <input type="text" v-model="name" /><br />
+      출생 연도: <input type="text" v-model="year" /><br />
+      {{result}}
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            result: '',
+            dormitory: '',
+          };
+        },
+        watch: {
+          name(current) {
+            if (current == '') {
+              dormitory = '그리핀도르';
+            } else if (current.length >= 5) {
+              dormitory = '래번클로';
+            } else if (current.length < 5) {
+              dormitory = '슬리데린';
+            }
+          },
+        },
+        methods: {
+          year() {
+            if (this.year < 11 || this.year >= 19) {
+              return '입학 대상 연령이 아닙니다.';
+            }
+            return 0;
+          },
+        },
+        computed: {
+          result() {
+            return `${dormitory}에 배정되었습니다! (나이: ${year})`;
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
