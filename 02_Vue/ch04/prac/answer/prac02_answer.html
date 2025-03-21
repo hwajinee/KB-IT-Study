@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button v-on:click="choose('엘더 지팡이')">엘더 지팡이</button>
+      <button v-on:click="choose('단풍 지팡이')">단풍 지팡이</button>
+      <!-- @click : v-on:click 축약형 -->
+      <button @click="choose('벚나무 지팡이')">벚나무 지팡이</button>
+      <button @click="reset">지팡이 초기화</button>
+      <h3>{{message}}</h3>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            selected: '',
+            message: '',
+          };
+        },
+        methods: {
+          choose(current) {
+            if (this.selected == current) {
+              this.message = `이미 ${current}를 선택했습니다. 다른 지팡이를 선택하세요!`;
+            } else {
+              this.selected = current;
+              this.message = `당신은 ${current}를 선택했습니다!`;
+            }
+          },
+          //   select1() {
+          //     select1_count++;
+          //     if (select1_count > 1) {
+          //       this.result =
+          //         '이미 엘더 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+          //     } else {
+          //       this.result = '당신은 엘더 지팡이를 선택했습니다!';
+          //     }
+          //   },
+          //   select2() {
+          //     select2_count++;
+          //     if (select2_count > 1) {
+          //       this.result =
+          //         '이미 단풍 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+          //     } else {
+          //       this.result = '당신은 단풍 지팡이를 선택했습니다!';
+          //     }
+          //   },
+          //   select3() {
+          //     select3_count++;
+          //     if (select3_count > 1) {
+          //       this.result =
+          //         '이미 벚나무 지팡이를 선택했습니다. 다른 지팡이를 선택하세요!';
+          //     } else {
+          //       this.result = '당신은 벚나무 지팡이를 선택했습니다!';
+          //     }
+          //   },
+          reset() {
+            this.selected = '';
+            this.message = '지팡이를 다시 선택해주세요.';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
