@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Latest compiled and midified CSS -->
+    <style></style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="alert alert-success">
+      <strong>Success!</strong> Indicates a successful or positive action.
+    </div>
+    alert-link
+    <!-- alert-link: 알림창 안에 링크 생성 -->
+    <div class="alert alert-success">
+      <strong>Success!</strong> You should
+      <a href="#" class="alert-link">read this message</a>.
+    </div>
+    <br />
+
+    <div class="alert alert-info">
+      <strong>Info:</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-info">
+      <strong>Info:</strong> You should
+      <a href="#" class="alert-link">read this message</a>.
+    </div>
+    <br />
+
+    <div class="alert alert-warning">
+      <strong>Warning!</strong> Indicates a successful or positive action.
+    </div>
+    alert-dismissible
+    <!-- alert-dismissible : 알림창 안에 닫기 버튼 생성 -->
+    <div class="alert alert-warning alert-dismissible">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Warning!</strong> This alert box could indicate a successful or
+      positive action.
+    </div>
+    <br />
+
+    <div class="alert alert-danger">
+      <strong>Danger*</strong> Indicates a successful or positive action.
+    </div>
+    fade show
+    <!-- fade show: dismissible로 생성한 닫기 버튼을 눌렀을 때, 사라지면서 부드러운 애니메이션 효과 적용 -->
+    <div class="alert alert-danger alert-dismissible fade show">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong>Danger*</strong> This alert box could indicate a successful or
+      positive action.
+    </div>
+
+    <div class="alert alert-primary">
+      <strong>primary :</strong> Indicates a successful or positive action.
+    </div>
+    <div class="alert alert-secondary">
+      <strong>Secondary :</strong> Indicates a successful or positive action.
+    </div>
+  </body>
+</html>
