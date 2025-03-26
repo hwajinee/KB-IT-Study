@@ -1,0 +1,15 @@
+<template>
+  <!-- 부모로부터 name을 받아오고, 변경됐을 때 부모에게 이멘트로 변경된 값 전송 -->
+  <input
+    type="text"
+    :value="name"
+    @input="$emit('update:mame', $event.target.value)"
+  />
+</template>
+
+<script>
+export default {
+  name: 'InputName',
+  props: ['name'],
+};
+</script>
