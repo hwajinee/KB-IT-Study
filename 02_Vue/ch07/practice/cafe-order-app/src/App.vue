@@ -1,8 +1,8 @@
 <template>
   <h1>카페 주문 앱</h1>
-  <h3>메뉴 선택</h3>
-  <div class="menu-box">메뉴</div>
-  <MenuList />
+  <div>
+    <MenuList :menus="menuList" />
+  </div>
 </template>
 
 <script>
@@ -24,4 +24,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style>
+.body {
+  padding: 20px;
+}
+</style>
