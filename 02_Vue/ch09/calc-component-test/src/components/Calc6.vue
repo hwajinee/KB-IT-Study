@@ -1,6 +1,6 @@
 <template>
   <div>
-    X : <input type="text" v-model.number="state.x" />
+    X : <input type="text" v-model.number="state.result" />
     <br />
     <div>결과 : {{ state.result }}</div>
   </div>
