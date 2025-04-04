@@ -31,9 +31,11 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import { inject } from 'vue';
+
 defineProps({
   todoItem: { Type: Object, required: true },
 });
+
 const router = useRouter();
 /* App.vue에서 provide한 deleteTodo(), toggleDone() 과 같은 함수를 사용하기 위해. injection
    App.vue 에 있는 메소드를 객체 구조 분해로 필요한 것만 가져오기. */

@@ -60,7 +60,8 @@ const addTodoHandler = () => {
     alert('할일은 반드시 입력해야 합니다.');
     return;
   }
-  addTodo({ ...todoItem }); // proxy객체가 아닌 순수 데이터 객체로 만들고 add하기 위해, spread연산자를 사용하여 내용 복사를 한다.
-  router.push('/todos');
+  addTodo({ ...todoItem }, () => {
+    router.push('/todos');
+  }); // proxy객체가 아닌 순수 데이터 객체로 만들고 add하기 위해, spread연산자를 사용하여 내용 복사를 한다.
 };
 </script>
