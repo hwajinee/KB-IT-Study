@@ -2,7 +2,7 @@ package week01;
 
 import java.util.Arrays;
 
-public class ex01 {
+public class ex03 {
     public static void main(String[] args) {
 
         int[] d = {1,3,2,5,4};
