@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <h1>Process - 1</h1>
+    <h2>Process - 2</h2>
+
+    <script>
+      /* 
+        dom_fault.html 해결방법 1 ) script 위치 옮기기
+        단점 - body가 길어지면 script를 찾기 위해 스크롤을 많이 해야 함.
+      */
+      document.querySelector('h1').style.backgroundColor = 'red';
+      document.querySelector('h2').style.backgroundColor = 'red';
+    </script>
+  </body>
+</html>
