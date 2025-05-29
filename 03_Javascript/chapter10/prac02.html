@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document.getElementById('transferForm').addEventListener('submit', function (event) {
+          event.preventDefault();
+          
+          let amount = document.getElementById('amount').value.trim(); //trim() : 앞/뒤 공백 제거하고 문자열만 사용.
+          // 구현 - amount 값 검증 (NaN으로 숫자인지 체크)
+          let balance = document.getElementById('remainingBalance').textContent;
+
+          // // 문자열에서 잔액(숫자)만 추출 * 정규식 사용.
+          let regex = /[^0-9]/g;
+          balance = balance.replace(regex, '');
+          
+          if ( isNaN(amount) ){
+            document.getElementById('resultMessage').innerHTML = '유효한 금액을 입력하세요.';
+          } else if(amount > balance){
+          }
+          else{
+            document.getElementById('resultMessage').innerHTML = `${amount}원 이체 완료!`;
+          
+
+          
+          console.log(balance);
+          balance = (balance - amount).toLocaleString();
+          document.getElementById('remainingBalance').innerHTML = `남은 잔액: ${balance}원`;
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <form id="transferForm">
+      <input type="text" id="amount" placeholder="이체 금액 입력" />
+      <button type="submit">이체하기</button>
+    </form>
+    <p id="resultMessage"></p>
+    <!--  -->
+    <p id="remainingBalance">남은 잔액: 100,000원</p>
+  </body>
+</html>

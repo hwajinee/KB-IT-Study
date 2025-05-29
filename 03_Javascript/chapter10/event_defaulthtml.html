@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let button = document.getElementById('button');
+
+        // 기본 이벤트 제거 방식 2가지
+        // 1. false값 리턴
+        button.onclick = function () {
+          return false;
+        };
+
+        // 2. preventDefault() - 이 때는 event를 인자로 받아와야 함.
+        button.onclick = function (e) {
+          e.preventDefault();
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <a id="button" href="http:/hanbit.co.kr">버튼</a>
+  </body>
+</html>
