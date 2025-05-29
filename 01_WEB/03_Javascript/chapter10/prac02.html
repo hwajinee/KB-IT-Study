@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document
+          .getElementById('transferForm')
+          .addEventListener('submit', function (event) {
+            event.preventDefault();
+            let amount = document.getElementById('amount').value.trim();
+            // 구현 - amount 값 검증 (숫자만)
+
+            console.log(amount);
+            console.log(remainingBalance);
+          });
+
+        let remainingBalance = document.getElementById('remainingBalance');
+        let balance = remainingBalance.textContent;
+
+        // 구현 - balance에서 잔액만 추출하기.
+
+        // 출력문
+        document
+          .getElementById('resultMessage')
+          .innerHTML(`${amount}원 이체 완료. \n남은 잔액: ${balance}원`);
+      };
+    </script>
+  </head>
+  <body>
+    <form id="transferForm">
+      <input type="text" id="amount" placeholder="이체 금액 입력" />
+      <!-- 사용자가 입력한 값은 value 속성에 저장됨 !!! -->
+      <!-- 추가 - 문자열 공백 제거 함수: trim() -->
+      <!-- 제출 버튼 클릭 시, 이벤트명은 submit. -->
+      <button type="submit">이체하기</button>
+    </form>
+    <p id="resultMessage"></p>
+    <!--  -->
+    <p id="remainingBalance">남은 잔액: 100,000원</p>
+  </body>
+</html>

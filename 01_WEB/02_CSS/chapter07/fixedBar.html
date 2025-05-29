@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixed Bar</title>
+    <style>
+      .left_bar {
+        background-color: blue;
+        position: fixed;
+        width: 50px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .bottom_bar {
+        background-color: red;
+        position: fixed;
+        height: 50px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .container {
+        margin-left: 50px;
+        /* 주의 ! 스크롤했을 때, bottom_bar에 겹쳐서 가려지지 않도록. */
+        margin-bottom: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left_bar"></div>
+    <div class="bottom_bar"></div>
+    <div class="container">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur
+        cupiditate iure sint nam magnam atque harum quod beatae! Aut, earum ab
+        nihil veniam consequuntur ex, delectus facilis eaque voluptatibus, et
+        dolore iste quia. Voluptate consectetur quam cum quod corrupti labore
+        neque deleniti? Nihil hic asperiores eveniet necessitatibus natus
+        temporibus, ex totam sit quia nostrum corrupti adipisci impedit.
+        Consectetur accusamus aut totam dolores maiores, voluptas dolore
+        dolorum, est unde deleniti dolor vero amet nostrum! Quasi minus sit est
+        odit incidunt. Praesentium blanditiis iste maiores sint, suscipit saepe,
+        ea veritatis iusto ducimus natus consectetur hic sit repellat, ab sunt
+        officiis unde fuga.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur
+        cupiditate iure sint nam magnam atque harum quod beatae! Aut, earum ab
+        nihil veniam consequuntur ex, delectus facilis eaque voluptatibus, et
+        dolore iste quia. Voluptate consectetur quam cum quod corrupti labore
+        neque deleniti? Nihil hic asperiores eveniet necessitatibus natus
+        temporibus, ex totam sit quia nostrum corrupti adipisci impedit.
+        Consectetur accusamus aut totam dolores maiores, voluptas dolore
+        dolorum, est unde deleniti dolor vero amet nostrum! Quasi minus sit est
+        odit incidunt. Praesentium blanditiis iste maiores sint, suscipit saepe,
+        ea veritatis iusto ducimus natus consectetur hic sit repellat, ab sunt
+        officiis unde fuga.
+      </p>
+    </div>
+  </body>
+</html>

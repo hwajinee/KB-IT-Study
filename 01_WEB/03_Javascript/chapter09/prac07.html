@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let bulbasaur = { name: '이상해씨', level: 5, skills: ['몸통박치기'] };
+      let newSkills = {
+        7: '덩굴채찍',
+        10: '씨뿌리기',
+        16: '솔라빔',
+      };
+      let newSkill = '';
+
+      function levelUp(mon) {
+        mon.level++;
+        console.log(`${mon.name}씨의 레벨이 ${mon.level}이(가) 되었다!`);
+
+        if (mon.level == 7) {
+          newSkill += newSkills[7];
+        } else if (mon.level == 10) {
+          newSkill += newSkills[10];
+        } else if (mon.level == 16) {
+          newSkill += newSkills[16];
+        }
+
+        if (newSkill != '') {
+          mon.skills.push(newSkill);
+          console.log(`${mon.name}가 새로운 기술 '${newSkill}'을(를) 배웠다!`);
+        }
+      }
+
+      levelUp(bulbasaur);
+      levelUp(bulbasaur);
+      levelUp(bulbasaur);
+    </script>
+  </head>
+  <body></body>
+</html>

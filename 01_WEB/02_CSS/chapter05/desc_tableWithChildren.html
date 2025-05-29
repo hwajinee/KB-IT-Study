@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* table > tr > th 로 작성하면,
+      제대로 적용되지 않음.
+      thead, tbody, tfoot을 직접 작성하지 않아도 table 아래에 자동으로 추가되어,
+      table 바로 아래 tr이 자손으로 있지 않기 때문. */
+      table tr > th {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>이름</th>
+        <th>지역</th>
+      </tr>
+      <tr>
+        <td>윤인성</td>
+        <td>서울특별시 강서구 내발산동</td>
+      </tr>
+    </table>
+  </body>
+</html>

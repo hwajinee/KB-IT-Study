@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 우선순위
+        !important > 인라인 스타일 >id > 클래스 > 일반 태그 > 전체 선택자 순 -->
+    <style>
+      /* import : 최고 점수 */
+      div {
+        color: red !important;
+      }
+      /* 일반 태그 선택자 : 1점 */
+      div {
+        color: violet;
+      }
+      /* id 선택자 : 100점 */
+      #yellow {
+        color: yellow;
+      }
+      /* 클래스 선택자 : 10점 */
+      .green {
+        color: green;
+      }
+      /* 전체 선택자 : 0점 */
+      * {
+        color: blue;
+      }
+      body {
+        color: pink;
+      }
+      /* ex) .list li.item : 20점(클래스 2, 일반 선택자 1)
+             #submit span : 101점
+             header .menu li.nth-child(2) : 22점 */
+    </style>
+  </head>
+  <body>
+    <!-- 인라인 스타일 : 1000점 -->
+    <div id="yellow" class="green" style="color: orange">안녕하세요</div>
+  </body>
+</html>
